@@ -25,3 +25,5 @@ for i in range(n) :
         else : c_list[a_b_list[i][0]] -= a_b_list[i][1]
 
 print(origin_sum - sum(c_list))
+
+#[실행결과] AC
