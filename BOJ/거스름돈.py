@@ -9,6 +9,7 @@ point = 0
 while True :
     if pay_money == 0 : break
 
+
     if pay_money >= money_list[point] :
         pay_money -= money_list[point]
         cnt += 1
