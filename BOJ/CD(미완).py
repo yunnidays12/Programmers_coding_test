@@ -1,24 +1,19 @@
 
-n, m = map(int, input().split())
+while True :
+    n, m = map(int, input().split())
+    if n == 0 and m == 0 : break
 
-cd_dict = {}
+    n_set = set()
+    m_set = set()
 
-for _ in range(n) :
-    n_input = int(input())
-    cd_dict[n_input] = 1
+    for _ in range(n) :
+        n_input = int(input())
+        n_set.add(n_input)
 
-for _ in range(m) :
-    m_input = int(input())
-    if m_input not in cd_dict :
-        cd_dict[m_input] = 1
-    else : cd_dict[m_input] += 1
+    for _ in range(m) :
+        m_input = int(input())
+        m_set.add(m_input)
 
-for _ in range(1) :
-    last_input = input()
-
-answer = 0
-
-for i in cd_dict :
-    if cd_dict[i]%2 == 0 : answer += 1
-
-print(answer)
+    answer = len(n_set&m_set)
+    
+    print(answer)
